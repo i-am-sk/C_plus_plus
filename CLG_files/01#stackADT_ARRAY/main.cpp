@@ -21,11 +21,11 @@ template <class t>
 void stack<t>::push(int x){
 
     if(top==SIZE-1){
-        cout<<"Stack Overflow\n";
+        std::cout<<"Stack Overflow\n";
     }
     else{
         a[++top]= x;
-        cout<<"Inserted element is "<<x<<"\n";
+        std::cout<<"Inserted element is "<<x<<"\n";
     }
 }
 
@@ -34,7 +34,7 @@ template <class t>
 int stack<t>::pop(){
 
     if(top==-1){
-        cout<<"Stack is UnderFlow\n";
+        std::cout<<"Stack is UnderFlow\n";
         return 0;
     }
     else{
@@ -48,12 +48,12 @@ template <class t>
 void stack<t>::display(){
 
     if(top==-1){
-        cout<<"\nStack is empty\n";
+        std::cout<<"\nStack is empty\n";
     }
     else{
-        cout<<"stack elements are \n";
+        std::cout<<"stack elements are \n";
         for(int i=top;i>=0;i--){
-            cout<<a[i]<<"\n";
+            std::cout<<a[i]<<"\n";
         }
     }
 }
@@ -66,26 +66,27 @@ int main(){
 
     while(1){
 
-        cout<<"\n1.push\n";
-        cout<<"2.pop\n";
-        cout<<"3.display\n";
-        cout<<"4.exit";
-        cout<<"\nSelect your choice from the above following\n";
-        cin>>ch;
+        std::cout<<"\n1.push\n";
+        std::cout << "2.pop\n";
+        std::cout << "3.display\n";
+        std::cout << "4.exit";
+        std::cout << "\nSelect your choice from the above following\n";
+        std::cin >> ch;
 
         switch(ch){
 
-            case 1: cout<<"Enter the element to insert\n";
-                    cin>>x;
-                    s.push(x);
-                    break;
+            case 1:
+                std::cout << "Enter the element to insert\n";
+                std::cin >> x;
+                s.push(x);
+                break;
             case 2: item=s.pop();
-                    cout<<"deleted element is "<<item<<"\n";
+                    std::cout<<"deleted element is "<<item<<"\n";
                     break;
             case 3: s.display();
             break;
             case 4: exit(0);
-            default: cout<<"Invalid Response\n";
+            default: std::cout<<"Invalid Response\n";
         }
     }
     return 0;

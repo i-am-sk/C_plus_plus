@@ -19,6 +19,7 @@ _cgo_export.*
 
 _testmain.cpp
 
+*.out
 *.exe
 *.test
 *.prof
